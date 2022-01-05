@@ -27,6 +27,7 @@ def main():
 
     run = True
     while run:
+        # GG
         clock.tick(FPS)
 
         # Exits game loop if window exit button pressed
