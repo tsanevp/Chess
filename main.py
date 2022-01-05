@@ -3,6 +3,7 @@ Peter Tsanev
 This file calls and starts the game of Chess.
 '''
 import pygame
+from pygame.constants import MOUSEBUTTONDOWN
 from board import Board
 from constants import WIDTH, HEIGHT, FPS, SQUARE, BLACK_PAWN
 # from os import environ
@@ -26,11 +27,17 @@ def main():
 
     run = True
     while run:
+        clock.tick(FPS)
 
         # Exits game loop if window exit button pressed
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                pos = pygame.mouse.get_pos()
+                row, col = mouse_click(pos)
+                print(row, col)
 
         # Test code
         board.draw_squares(screen)
@@ -38,7 +45,6 @@ def main():
 
         # Updates the display
         pygame.display.update()
-        clock.tick(FPS)
 
     pygame.quit()
 
