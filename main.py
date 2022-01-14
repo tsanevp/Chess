@@ -5,7 +5,7 @@ This file calls and starts the game of Chess.
 import pygame
 from pygame.constants import MOUSEBUTTONDOWN
 from board import Board
-from constants import WIDTH, HEIGHT, FPS, SQUARE, BLACK_PAWN
+from constants import WIDTH, HEIGHT, FPS, SQUARE
 # from os import environ
 # environ['PYGAME_HIDE_SUPPORT_PROMPT'] = 'hide'
 
@@ -41,7 +41,7 @@ def main():
 
         # Test code
         board.draw_squares(screen)
-        screen.blit(BLACK_PAWN, (15, 10))
+        # screen.blit(BLACK_PAWN, (15, 10))
 
         # Updates the display
         pygame.display.update()

@@ -14,5 +14,7 @@ WIDTH = HEIGHT = BOARD_SIZE
 
 FPS = 60
 
-BLACK_PAWN = pygame.transform.scale(pygame.image.load('black_pawn.jpg'),
-                                    (75, 75))
+# BLACK_PAWN = pygame.transform.scale(pygame.image.load('bp.png'),
+#                                     (75, 75))
+PIECES = ['wp', 'wR', 'wH', 'wB', 'wQ', 'wK', 'bp', 'bR', 'bH', 'bB', 'bQ',
+          'bK']

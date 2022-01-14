@@ -4,13 +4,15 @@ This board.py is responsible for defining and setting up the Chess board.
 '''
 import pygame
 from constants import NUM_SQUARES, SQUARE
+from pieces import Pieces
 
 
 class Board:
     '''
     '''
     def __init__(self):
-        pass
+        self.chess_piece = Pieces()
+        print(self.chess_piece.IMAGES)
 
     def draw_squares(self, screen):
         screen.fill('white')
